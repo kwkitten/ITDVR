@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class tutorial : MonoBehaviour
 {
+    public static bool tutorialCompleted = false;
+
     [SerializeField]
     public TMP_Text notification;
 
@@ -97,5 +99,6 @@ public class tutorial : MonoBehaviour
     public void CloseTutorial()
     {
         SceneManager.LoadScene("GameScene");
+        tutorialCompleted = true;
     }
 }
